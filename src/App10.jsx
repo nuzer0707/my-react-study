@@ -32,7 +32,7 @@ function ScoreTableBody({students}) {
       <tbody>
           {
               students.map((student) => {
-                  const psaa = student.score >= 60 ? "V" : "X";
+                  const psaa = student.score >=60 ? "V" : "X";
                   return (
                       <tr>
                           <td>{student.id}</td>
