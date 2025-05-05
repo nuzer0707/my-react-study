@@ -38,7 +38,7 @@ function ScoreTableBody({students}) {
                           <td>{student.id}</td>
                           <td>{student.name}</td>
                           <td align="center">{student.score}</td>
-                          <td align="center">{psaa}</td>
+                          <td align="right">{psaa}</td>
                       </tr>
                   );
               })
