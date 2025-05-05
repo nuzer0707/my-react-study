@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+/*
+li:has(input[type="checkbox"]:checked) {
+  // 可選：加上其他樣式 
+  text-decoration: line-through; // 加上刪除線 
+  color: rgb(255, 142, 142);
+}*/
