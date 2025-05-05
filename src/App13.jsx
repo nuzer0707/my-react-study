@@ -1,9 +1,16 @@
 function App(){
 
+  let count =0;
+  function handleClick(){
+    count++;  //更新 count
+    document.getElementById('count').textContent = count;
+
+  }
+
   return(
     <>
-      <div id="count"></div>
-      <button> 按我一下 count 可以 + 1</button>
+      <div id="count">0</div>
+      <button onClick={handleClick}> 按我一下 count 可以 + 1</button>
     </>
   )
 
