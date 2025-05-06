@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './App.css'
 
 function App() {
 
@@ -43,7 +43,7 @@ function App() {
   };
 
   //3.編輯商品處理函式
-  const handleEditItem = (itemToEdit) => {
+  /*const handleEditItem = (itemToEdit) => {
     const newName = prompt('請輸入新的商品名稱：', itemToEdit.name);
     if (newName === null) return;
     const newPriceString = prompt('請輸入新的商品價格：', itemToEdit.price);
@@ -60,7 +60,7 @@ function App() {
           : item
       )
     );
-  };
+  };*/
 
   // --- 計算總金額 (直接計算) ---
   const totalAmount = items.reduce((sum, item) => sum + item.price, 0);
@@ -84,21 +84,24 @@ function App() {
         <ul>
           {items.map((item) => (
             <li key={item.id}>
-              <span title="點擊以編輯" onClick={() => handleEditItem(item)}>
-                {item.orderNumber}. {item.name} - ${item.price.toFixed(2)}
+              <span>{/* title="點擊以編輯" onClick={() => handleEditItem(item)} */}
+                {item.orderNumber}. {item.name} - ${item.price.toFixed(1)}
               </span>
-              <button onClick={() => handleDeleteItem(item.id)}>X</button>
+              <button onClick={() => handleDeleteItem(item.id)}>刪除</button>
             </li>
           ))}
         </ul>
       )}
 
       <h3>
-        總金額: ${totalAmount.toFixed(2)}
+        總金額: ${totalAmount.toFixed(1)}
       </h3>
     </>
   )
 
 }
 
+
+
 export default App;
+
